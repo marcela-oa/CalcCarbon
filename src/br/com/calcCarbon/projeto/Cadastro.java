@@ -27,7 +27,7 @@ public class Cadastro {
 		System.out.println("Digte o nome de sua cidade: ");
 		cidade=leia.next();
 		
-
+		leia.close();
 	}
 	public static void bemVindo() {
 		
