@@ -33,7 +33,6 @@ aproximadamente quantos kg de carne por semana (1 bife = 90g)
 		this.qntCarne = carne;
 	}
 		
-	@Override
 	public double calculo() {
 		return this.total = this.qntCarne * this.indice;	
 	}
