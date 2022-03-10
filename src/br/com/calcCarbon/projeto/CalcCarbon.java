@@ -52,6 +52,8 @@ public class CalcCarbon {
 			c.setQntCarne(leia.nextDouble());
 		}
 		c.calculo();
+		
+		System.out.println(c.getTotal());
 		System.out.println();
 				
 		//--------------- SECAO ENERGIA --------------
