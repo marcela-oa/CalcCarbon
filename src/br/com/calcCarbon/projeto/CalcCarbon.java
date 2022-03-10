@@ -54,7 +54,6 @@ public class CalcCarbon {
 		c.calculo();
 		System.out.println();
 		
-		// -------------------------------------------
 		// ------------- SECAO TRANSPORTE ------------
 		Transporte t = new Transporte(usuario.getNome());
 
@@ -100,13 +99,10 @@ public class CalcCarbon {
 				t.setKm(leia.nextDouble());
 			}
 			
-			t.calculo();
-			System.out.println(t.getTotalTr());
-				
+			t.calculo();				
 		//--------------- SECAO ENERGIA --------------
 		
 		
-		// -------------------------------------------
 		// ------------- SECAO FINAL -----------------
 		
 		Carbono total = new Carbono();
