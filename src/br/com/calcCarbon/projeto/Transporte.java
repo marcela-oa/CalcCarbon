@@ -1,6 +1,6 @@
 package br.com.calcCarbon.projeto;
 
-public class Transporte {
+public class Transporte implements Calculo {
 /*Você tem automovel? 
 se sim, quanto em Litros você utiliza de combustivel por semana 
 1 L de gasolina = 1,6 kg de CO2e
@@ -50,6 +50,12 @@ se sim, quantos km em média você anda de onibus por semana?
 
 		public void setDecisao(int decisao) {
 			this.decisao = decisao;
+		}
+
+		@Override
+		public double calculo() {
+			//retornar o valor em semana
+			return 0;
 		} 	
 	
 }
