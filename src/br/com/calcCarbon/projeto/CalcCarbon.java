@@ -20,7 +20,7 @@ public class CalcCarbon {
 		usuario.pergunta2(usuario.getNome());
 		usuario.setIdade(leia.nextInt());
 
-		usuario.pergunta3();
+		/*usuario.pergunta3();
 		usuario.setQtdeMoradores(leia.nextInt());
 		
 		usuario.pergunta4();
@@ -43,7 +43,7 @@ public class CalcCarbon {
 				System.out.println("Opção inválida, tente novamente! \n");
 				i = 0;
 			} else {
-				i++;
+				i = 1;
 			}	
 		}
 		
@@ -53,12 +53,58 @@ public class CalcCarbon {
 		}
 		c.calculo();
 		System.out.println();
+		*/
+		// -------------------------------------------
+		// ------------- SECAO TRANSPORTE ------------
+		Transporte t = new Transporte(usuario.getNome());
+			int i = 1;
+			while (i == 1) {
+			
+				t.pergunta1();
+				t.setDecisao1(leia.nextInt());
+				
+				if (t.getDecisao1() != 1 && t.getDecisao1() != 2) {
+					System.out.println("Opção inválida, tente novamente! \n" );
+					i = 1;
+				}
+				else {
+					i = 2;
+				}
+				
+			}
+			
+			
+			t.pergunta2();
+			if (t.getDecisao1() == 1) {
+				t.setGasolina(leia.nextDouble());
+			}
+			
+				while (i == 2) {
+					
+					t.pergunta3();
+					t.setDecisao2(leia.nextInt());
+					
+					if (t.getDecisao2() != 1 && t.getDecisao2() != 2) {
+						System.out.println("Opção inválida, tente novamente! \n" );
+						i = 2;
+					}
+					else {
+						i = 3;
+					}
+					
+				}
+			
+			t.pergunta4();
+			if (t.getDecisao2() == 1) {
+				
+				t.setKm(leia.nextDouble());
+			}
+			
+			t.calculo();
+			System.out.println(t.getTotalTr());
 				
 		//--------------- SECAO ENERGIA --------------
 		
-		
-		// -------------------------------------------
-		// ------------- SECAO TRANSPORTE ------------
 		
 		// -------------------------------------------
 		// ------------- SECAO FINAL -----------------
