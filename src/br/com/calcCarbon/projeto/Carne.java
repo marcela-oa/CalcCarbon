@@ -12,6 +12,11 @@ aproximadamente quantos kg de carne por semana (1 bife = 90g)
 	private double indice = 152.0;
 	private int decisao;
 	
+	public Carne (String nome) {
+		System.out.println("\n/////////////////////////////////////////////////////////////////////");
+		System.out.println(nome + ", vamos precisar de uma informação sobre sua alimentação, ok?\n");
+	}
+	
 	public void pergunta1() {
 			System.out.println("Você come carne?\n 1 - SIM \n 2 - NÃO" );
 		}
@@ -45,10 +50,5 @@ aproximadamente quantos kg de carne por semana (1 bife = 90g)
 	
 	public int getDecisao() {
 		return decisao;
-	}
-	
-	public void secaoCarne(String nome) {
-		System.out.println("\n/////////////////////////////////////////////////////////////////////");
-		System.out.println(nome + " Vamos precisar de uma informação sobre sua alimentação, ok?\n");
 	}	
 }

@@ -31,9 +31,7 @@ public class CalcCarbon {
 		
 		
 		// -------- SEÇÃO ALIMENTAÇÃO ----------
-		Carne c = new Carne();
-	
-		c.secaoCarne(usuario.getNome());
+		Carne c = new Carne(usuario.getNome());
 		
 		int i = 0;
 		while (i == 0) {
@@ -54,6 +52,7 @@ public class CalcCarbon {
 			c.setQntCarne(leia.nextDouble());
 		}
 		c.calculo();
+		System.out.println();
 				
 		//--------------- SECAO ENERGIA --------------
 		

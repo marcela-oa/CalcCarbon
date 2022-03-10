@@ -45,15 +45,15 @@ public class Cadastro {
 	}
 	
 	public void pergunta2(String nome) {
-		System.out.println(nome + " Insira sua Idade:  ");
+		System.out.println(nome + ", insira sua idade:  ");
 	}
 	
 	public void pergunta3() {
-		System.out.println("Quantas pessoas moram na mesma casa que você? (Digite um se você morar sozinho)\"");
+		System.out.println("Quantas pessoas moram na mesma casa que você? (Digite 1 se você morar sozinho)");
 	}
 	
 	public void pergunta4() {
-		System.out.println("Digte A sigla de seu estado:  ");
+		System.out.println("Digte a sigla de seu estado:  ");
 	}
 	public void pergunta5() {
 		System.out.println("Digte o nome de sua cidade: ");
