@@ -55,7 +55,12 @@ public class CalcCarbon {
 		System.out.println();
 				
 		//--------------- SECAO ENERGIA --------------
-		
+		Energia e = new Energia(usuario.getNome());
+		e.pergunta1();
+		e.setmEnergia(leia.nextDouble());
+		e.pergunta2();
+		e.setgAnos(leia.nextDouble());
+		e.calculo(usuario.getQtdeMoradores());
 		
 		// -------------------------------------------
 		// ------------- SECAO TRANSPORTE ------------
