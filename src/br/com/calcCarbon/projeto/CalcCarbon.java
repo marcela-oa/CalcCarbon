@@ -34,9 +34,11 @@ public class CalcCarbon {
 		}
 		
 		c.pergunta2();
-		c.setQntCarne(leia.nextDouble());
+		if (c.getDecisao() == 1) {
+			c.setQntCarne(leia.nextDouble());
+		}
 		c.calculo();
-		
+				
 		//--------------- SECAO ENERGIA --------------
 		
 		

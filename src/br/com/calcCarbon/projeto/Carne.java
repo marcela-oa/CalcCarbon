@@ -7,7 +7,7 @@ se sim:
 aproximadamente quantos kg de carne por semana (1 bife = 90g)
 1 kg de carne = 152 kg de CO2e
 */
-	private double qntCarne;
+	private double qntCarne = 0.0;
 	private double total;
 	private double indice = 152.0;
 	private int decisao;
@@ -20,8 +20,6 @@ aproximadamente quantos kg de carne por semana (1 bife = 90g)
 		if(decisao == 1) {
 			System.out.println("\nQuanto você consome em kgs por semana? \n(Insira um valor com pelo menos um decimal. Exemplo: 2,0)"
 					+ "\n(Um bife é aproximadamente 90g)");
-		} else {
-			this.qntCarne = 0.0;
 		}
 	} 	
 		
@@ -53,6 +51,5 @@ aproximadamente quantos kg de carne por semana (1 bife = 90g)
 	public void secaoCarne() {
 		System.out.println("\n///////////////////////////////////////////////////////////");
 		System.out.println("Vamos precisar de uma informação sobre sua alimentação, ok?\n");
-	}
-	
+	}	
 }
