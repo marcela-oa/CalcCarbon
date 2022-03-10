@@ -18,6 +18,11 @@ se sim, quantos km em média você anda de onibus por semana?
 		private double indiceCarro = 1.6;
 		private double indiceTransporte = 0.011;
 		
+		public Transporte (String nome) {
+			System.out.println("\n///////////////////////////////////////////////////////////////////////////////////");
+			System.out.println(nome + ", agora vamos precisar de algumas informações sobre seus meios de transporte\n");
+		}
+	
 		public double getTotalTr() {
 			return totalTr;
 		}
@@ -26,11 +31,7 @@ se sim, quantos km em média você anda de onibus por semana?
 			this.totalTr = totalTr;
 		}
 
-		public Transporte (String nome) {
-			System.out.println("\n///////////////////////////////////////////////////////////////////////////////////");
-			System.out.println(nome + ", agora vamos precisar de algumas informações sobre seus meios de transporte\n");
-		}
-	
+		
 		public void pergunta1() {
 			System.out.println("Você tem um automovel?\n 1 - SIM \n 2 - NÃO" );
 		}
@@ -87,7 +88,7 @@ se sim, quantos km em média você anda de onibus por semana?
 		
 		@Override
 		public double calculo() {
-			return this.totalTr = (this.gasolina * this.indiceCarro) + (this.km * this.indiceTransporte);
+			return this.totalTr = (this.gasolina * this.indiceCarro) + ((this.km * this.indiceTransporte) * this.indiceCarro);
 			
 			
 		} 	

@@ -20,7 +20,7 @@ public class CalcCarbon {
 		usuario.pergunta2(usuario.getNome());
 		usuario.setIdade(leia.nextInt());
 
-		/*usuario.pergunta3();
+		usuario.pergunta3();
 		usuario.setQtdeMoradores(leia.nextInt());
 		
 		usuario.pergunta4();
@@ -53,11 +53,11 @@ public class CalcCarbon {
 		}
 		c.calculo();
 		System.out.println();
-		*/
+		
 		// -------------------------------------------
 		// ------------- SECAO TRANSPORTE ------------
 		Transporte t = new Transporte(usuario.getNome());
-			int i = 1;
+
 			while (i == 1) {
 			
 				t.pergunta1();
@@ -109,6 +109,18 @@ public class CalcCarbon {
 		// -------------------------------------------
 		// ------------- SECAO FINAL -----------------
 		
+		Carbono total = new Carbono();
+		
+	//	total.calculo1(c.getTotal(), i); - i = total energia;
+		total.totalSemanal(t.getTotalTr());
+		total.TotalAnual();
+		total.TotalVitalicio(usuario.getIdade());
+		
+		Indicacoes ind = new Indicacoes(usuario.getNome());
+		ind.resultados();
+		ind.indicações(usuario.getNome());
+		
+		System.out.println("\nMuito obrigade pela participação!!");
 		
 		leia.close();
 	}
