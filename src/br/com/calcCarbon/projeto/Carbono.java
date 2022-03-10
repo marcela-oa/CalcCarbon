@@ -6,16 +6,11 @@ public class Carbono {
 	private double totalAnual;
 	private double totalVitalicio;
 	private double tonelada = 0.001;
-
 	
-	public double calculo1 (double carne, double energia) {
-		return this.totalSemanal = (carne + energia);
+	public double totalSemanal (double carne, double energia, double transporte) {
+		return this.totalSemanal = ((carne + energia + transporte) * tonelada);
 	}
 	
-	public double totalSemanal(double transporte) {
-		return this.totalSemanal = (this.totalSemanal + transporte) * tonelada;
-	}
-
 	public double TotalAnual() {
 		return this.totalAnual = totalSemanal * 52.0;
 	}

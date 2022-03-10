@@ -1,6 +1,6 @@
 package br.com.calcCarbon.projeto;
 
-public class Carne implements Calculo {
+public class Carne {
 /*Você come carne? 
 sim ou não 
 se sim:

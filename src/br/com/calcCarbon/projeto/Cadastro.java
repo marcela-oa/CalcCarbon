@@ -53,10 +53,10 @@ public class Cadastro {
 	}
 	
 	public void pergunta4() {
-		System.out.println("Digte a sigla de seu estado:  ");
+		System.out.println("Digite a sigla de seu estado:  ");
 	}
 	public void pergunta5() {
-		System.out.println("Digte o nome de sua cidade: ");
+		System.out.println("Digite o nome de sua cidade: ");
 	}
 	
 public void bemVindo() {

@@ -35,7 +35,6 @@ public class CalcCarbon {
 		
 		int i = 0;
 		while (i == 0) {
-			
 			c.pergunta1();
 			c.setDecisao(leia.nextInt());
 			
@@ -57,64 +56,66 @@ public class CalcCarbon {
 		// ------------- SECAO TRANSPORTE ------------
 		Transporte t = new Transporte(usuario.getNome());
 
-			while (i == 1) {
-			
-				t.pergunta1();
-				t.setDecisao1(leia.nextInt());
+		while (i == 1) {
+			t.pergunta1();
+			t.setDecisao1(leia.nextInt());
 				
-				if (t.getDecisao1() != 1 && t.getDecisao1() != 2) {
-					System.out.println("Opção inválida, tente novamente! \n" );
-					i = 1;
-				}
-				else {
+			if (t.getDecisao1() != 1 && t.getDecisao1() != 2) {
+				System.out.println("Opção inválida, tente novamente! \n" );
+				i = 1;
+			} else {
 					i = 2;
-				}
-				
 			}
+		}
 			
+		t.pergunta2();
+		if (t.getDecisao1() == 1) {
+			t.setGasolina(leia.nextDouble());
+		}
 			
-			t.pergunta2();
-			if (t.getDecisao1() == 1) {
-				t.setGasolina(leia.nextDouble());
+		while (i == 2) {
+			t.pergunta3();
+			t.setDecisao2(leia.nextInt());
+					
+			if (t.getDecisao2() != 1 && t.getDecisao2() != 2) {
+				System.out.println("Opção inválida, tente novamente! \n" );
+				i = 2;
+			} else {
+				i = 3;
 			}
+		}
 			
-				while (i == 2) {
-					
-					t.pergunta3();
-					t.setDecisao2(leia.nextInt());
-					
-					if (t.getDecisao2() != 1 && t.getDecisao2() != 2) {
-						System.out.println("Opção inválida, tente novamente! \n" );
-						i = 2;
-					}
-					else {
-						i = 3;
-					}
-					
-				}
+		t.pergunta4();
+		if (t.getDecisao2() == 1) {
+			t.setKm(leia.nextDouble());
+		}
 			
-			t.pergunta4();
-			if (t.getDecisao2() == 1) {
-				
-				t.setKm(leia.nextDouble());
-			}
-			
-			t.calculo();				
+		t.calculo();	
 		//--------------- SECAO ENERGIA --------------
 		
+		Energia e = new Energia(usuario.getNome());
+	
+		e.pergunta1();
+		e.setmEnergia(leia.nextDouble());
+	
+		e.pergunta2();
+		e.setgAnos(leia.nextDouble());
+	
+		e.calculo(usuario.getQtdeMoradores());
 		
 		// ------------- SECAO FINAL -----------------
 		
 		Carbono total = new Carbono();
 		
-	//	total.calculo1(c.getTotal(), i); - i = total energia;
-		total.totalSemanal(t.getTotalTr());
+		total.totalSemanal(c.getTotal(), e.geteTotal(), t.getTotalTr());
 		total.TotalAnual();
 		total.TotalVitalicio(usuario.getIdade());
+		System.out.println(total.getTotalSemanal() + total.getTotalAnual() + total.getTotalVitalicio());
 		
 		Indicacoes ind = new Indicacoes(usuario.getNome());
-		ind.resultados();
-		ind.indicações(usuario.getNome());
+		ind.resultados(total.getTotalSemanal(), total.getTotalAnual(), total.getTotalVitalicio());
+		ind.indicações(total.getTotalAnual());
+		
 		
 		System.out.println("\nMuito obrigade pela participação!!");
 		
