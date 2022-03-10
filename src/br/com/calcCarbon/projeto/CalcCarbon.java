@@ -16,18 +16,27 @@ public class CalcCarbon {
 		
 		usuario.pergunta1();
 		usuario.setNome(leia.nextLine());
+	
 		
 		usuario.pergunta2(usuario.getNome());
 		usuario.setIdade(leia.nextInt());
+		
+		
 
 		usuario.pergunta3();
 		usuario.setQtdeMoradores(leia.nextInt());
 		
+		leia.nextLine();
+		
 		usuario.pergunta4();
 		usuario.setEstado(leia.nextLine());
 		
+	
+		
 		usuario.pergunta5();
 		usuario.setCidade(leia.nextLine());
+		
+		
 		
 		
 		// -------- SEÇÃO ALIMENTAÇÃO ----------

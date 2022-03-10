@@ -89,7 +89,7 @@ se sim, quantos km em média você anda de onibus por semana?
 		@Override
 		public double calculo() {
 			return this.totalTr = (this.gasolina * this.indiceCarro) + ((this.km * this.indiceTransporte) * this.indiceCarro);
-			
+			                                                              //              p/litro                 indi. de emissão por l
 			
 		} 	
 	
