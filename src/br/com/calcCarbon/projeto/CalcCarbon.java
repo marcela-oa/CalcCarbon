@@ -10,14 +10,30 @@ public class CalcCarbon {
 		
 		
 		// -------- SEÇÃO CADASTRO ------------
-		/*Cadastro.bemVindo();
-		Cadastro.scanner();*/
+		Cadastro usuario = new Cadastro();
+		
+		usuario.bemVindo();
+		
+		usuario.pergunta1();
+		usuario.setNome(leia.next());
+		
+		usuario.pergunta2(usuario.getNome());
+		usuario.setIdade(leia.nextInt());
+
+		usuario.pergunta3();
+		usuario.setQtdeMoradores(leia.nextInt());
+		
+		usuario.pergunta4();
+		usuario.setEstado(leia.next());
+		
+		usuario.pergunta5();
+		usuario.setCidade(leia.next());
 		
 		
 		// -------- SEÇÃO ALIMENTAÇÃO ----------
 		Carne c = new Carne();
 	
-		c.secaoCarne();
+		c.secaoCarne(usuario.getNome());
 		
 		int i = 0;
 		while (i == 0) {

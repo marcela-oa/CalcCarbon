@@ -47,8 +47,8 @@ aproximadamente quantos kg de carne por semana (1 bife = 90g)
 		return decisao;
 	}
 	
-	public void secaoCarne() {
-		System.out.println("\n///////////////////////////////////////////////////////////");
-		System.out.println("Vamos precisar de uma informação sobre sua alimentação, ok?\n");
+	public void secaoCarne(String nome) {
+		System.out.println("\n/////////////////////////////////////////////////////////////////////");
+		System.out.println(nome + " Vamos precisar de uma informação sobre sua alimentação, ok?\n");
 	}	
 }
